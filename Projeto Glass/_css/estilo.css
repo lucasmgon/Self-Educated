@@ -36,6 +36,32 @@ figure.foto-legenda figcaption {
 	transition: opacity 1s;
 }
 
-figure.foto-legenda:hover figcaption{
+figure.foto-legenda:hover figcaption {
 	opacity: 1; /* Configuração para exibir a legenda */
+}
+
+/* Formatação do menu */
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 300px;
+}
+
+nav#menu ul {
+	list-style: none; /* Tirar o marcador da lista */
+	text-transform: uppercase; /* Letras em maiúscula */
+}
+
+nav#menu li {
+	display: inline-block; /* Faz o bloco exibir em uma única linha */
+	background-color: #dddddd;
+	padding: 10px; /* Espaço dentro dos objetos */
+	margin: 2px; /* Espaço entre os objetos */
+}
+
+nav#menu h1 {
+	display: none; /* Esconder o texto menu principal */
 }
