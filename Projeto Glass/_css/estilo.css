@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+body {
+	background-color: white; /* Cor de fundo da página */
+	color: rgba(0,0,0,1); /* Cor da letra */
+}
+
+p {
+	text-align: justify; /* Alinhamento justificado */
+	text-indent: 50px; /* Indentar o parágrafo */
+}
+
+/* Formatação de imagens com legendas */
+
+figure.foto-legenda {
+	position: relative;
+	border: 8px solid white; /* Borda da figura */
+	box-shadow: 1px 1px 4px black; /* Sombra da borda */
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption{
+	opacity: 1; /* Configuração para exibir a legenda */
+}
