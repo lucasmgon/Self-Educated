@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@font-face { /* Importando fonte de texto local */
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 body {
 	background-color: #dddddd; /* Cor de fundo da página */
@@ -33,7 +38,7 @@ header#cabecalho {
 }
 
 header#cabecalho h1 { /* Configuração do título principal */
-	font-family: Arial, sans-serif;
+	font-family: 'FonteLogo', sans-serif;
 	font-size: 30pt;
 	color: #606060;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -42,7 +47,7 @@ header#cabecalho h1 { /* Configuração do título principal */
 }
 
 header#cabecalho h2 { /* Configuração do subtítulo */
-	font-family: Arial, sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	color: #888888;
 	font-size: 15pt;
 	padding: 0px;
