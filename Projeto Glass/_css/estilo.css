@@ -1,13 +1,29 @@
 @charset "UTF-8";
 
 body {
-	background-color: white; /* Cor de fundo da página */
+	background-color: #dddddd; /* Cor de fundo da página */
 	color: rgba(0,0,0,1); /* Cor da letra */
+}
+
+/* Configuração da div interface */
+
+div#interface {
+	width: 900px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto; /* Centralizar o conteúdo da página */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Borda com sombra */
+	padding: 10px;
 }
 
 p {
 	text-align: justify; /* Alinhamento justificado */
 	text-indent: 50px; /* Indentar o parágrafo */
+}
+
+header#cabecalho img#icone {
+	position: absolute; /* Configurar o ícone o óculos para alinhar a esquerda */
+	left: 780px;
+	top: 40px;
 }
 
 /* Formatação de imagens com legendas */
