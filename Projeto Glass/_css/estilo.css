@@ -60,8 +60,22 @@ nav#menu li {
 	background-color: #dddddd;
 	padding: 10px; /* Espaço dentro dos objetos */
 	margin: 2px; /* Espaço entre os objetos */
+	transition: background-color 1s; /* Efeito de transição quando mover o mouse no link */
+}
+
+nav#menu li:hover {
+	background-color: #606060; /* Cor  */
 }
 
 nav#menu h1 {
 	display: none; /* Esconder o texto menu principal */
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none; /* Tirar o sublinhado do link */
+}
+
+nav#menu a:hover {
+	color: #ffffff; /* Letra do link muda de cor quando passar o mouse */
 }
