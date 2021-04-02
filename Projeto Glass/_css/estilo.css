@@ -145,7 +145,33 @@ table#tabela td {
 	border: 1px solid #606060; /* Borda para a célula */
 	padding: 10px;
 	text-align: right;/* Alinhar texto */
+	vertical-align: middle;
+}
+
+table#tabela td.colE {
+	color: #ffffff;
+	background-color: #606060;
 	vertical-align: top;
+	font-weight: bold;
+}
+
+table#tabela td.colD {
+	background-color: #cecece;
+	text-align: left;
+}
+
+table#tabela caption {
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+
+table#tabela caption span {
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
 }
 
 /* Configuração da lateral */
