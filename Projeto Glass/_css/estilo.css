@@ -123,3 +123,30 @@ nav#menu a {
 nav#menu a:hover {
 	color: #ffffff; /* Letra do link muda de cor quando passar o mouse */
 }
+
+/* Configuração da sessão */
+
+section#corpo {
+	display: block; /* Mostrar como bloco */
+	width: 500px;
+	float: left; /* Flutue para o lado esquerdo */
+	border-right: 1px solid #606060;
+	padding-right: 20px; 
+}
+
+/* Configuração da lateral */
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right; /* Flutue para o lado direito */
+}
+
+/* Configuração do rodapé */
+footer#rodape {
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+	text-align: center;
+}
