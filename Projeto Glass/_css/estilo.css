@@ -125,13 +125,27 @@ nav#menu a:hover {
 }
 
 /* Configuração da sessão */
-
 section#corpo {
 	display: block; /* Mostrar como bloco */
 	width: 500px;
 	float: left; /* Flutue para o lado esquerdo */
 	border-right: 1px solid #606060;
 	padding-right: 20px; 
+}
+
+/* Configuração da tabela */
+table#tabela {
+	border: 1px solid #606060; /* Borda externa da tabela */
+	border-spacing: 0px; /* Espaço da borda entre as células */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabela td {
+	border: 1px solid #606060; /* Borda para a célula */
+	padding: 10px;
+	text-align: right;/* Alinhar texto */
+	vertical-align: top;
 }
 
 /* Configuração da lateral */
