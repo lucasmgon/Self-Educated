@@ -30,6 +30,6 @@ begin
 			read(continuar);
 		end;
 		writeln('A soma das idades femininas e: ',somaF);
-		writeln('A soma das idades femininas e: ',somaM);
+		writeln('A soma das idades masculinas e: ',somaM);
 	readln;
 end.
