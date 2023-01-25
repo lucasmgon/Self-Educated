@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-# Codificado por Lucas M.G.
 """
-Introdução à linguagem Python.
+Python para Iniciantes - Udemy
 """
 print ("Hello world")
 print ("What's up?")
@@ -25,16 +24,16 @@ x = 1
 y = 10000
 
 if x > y:
-	print("x e maior que x")
+	print("X é maior que X")
 
 else:
-	print("y e maior que x")
+	print("Y é maior que X")
 
 while(x < y and x < 10):
 	print(x)
 	x = x+1
 
-lista1 = [0,"ola","bolacha",9.99,True]
+lista1 = [0,"Olá","Bolacha",9.99,True]
 
 for i in lista1:
 	print(i)
@@ -51,7 +50,7 @@ print(concatenar)
 tamanho = len(concatenar)
 print(tamanho)
 
-#Funcao
+#Função
 def soma(x, y):
 	print(x + y)
 soma(2, 3)
@@ -70,4 +69,3 @@ import random
 
 numero = random.randint(0, 10)
 print(numero)
-
