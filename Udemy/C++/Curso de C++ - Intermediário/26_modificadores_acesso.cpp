@@ -33,8 +33,7 @@ void classeAmiga(Linguagem* l){
 	cout << "Classe amiga: " << l->nome << endl;
 }
 
-int main(int argc, char *argv[]){
-	
+int main(int argc, char *argv[]){	
 	Linguagem l;
 	LinguagemAmiga lamiga;
 	
