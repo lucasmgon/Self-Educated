@@ -10,7 +10,7 @@ protected:
 public:
 	Animal(const char* nome){
 		cout << "Construindo animal..." << endl;;
-		nome = new char[strlen(nome) + 1];
+		this->nome = new char[strlen(nome) + 1];
 		strcpy(this->nome, nome);
 	}
 	
