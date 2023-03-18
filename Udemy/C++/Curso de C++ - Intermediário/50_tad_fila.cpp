@@ -13,7 +13,7 @@ private:
 
 public:
 	void inserir(const T& e){
-		fila.push_back(e); // Insere o elemento no final
+		fila.push_back(e); //Insere o elemento no final
 	}
 	
 	bool vazia(){
@@ -22,19 +22,19 @@ public:
 	
 	T remover(){
 		if(!this->vazia()){
-			T e = fila.front(); // Pega o elemento que vai remover
+			T e = fila.front(); //Pega o elemento que vai remover
 			fila.pop_front(); // Remove o elemento
 			return e;
 		}
-		// Exceção
-		throw "Fila vazia!!"; 
+		//excessão
+		throw "Fila vazia!"; 
 	}
 	
 	T frente(){
 		if(!this->vazia()){
 			return fila.front();
 		}
-		// Exceção
+		//Excessão
 		throw "Fila vazia!!";
 	}
 	
@@ -42,7 +42,7 @@ public:
 		if(!this->vazia()){
 			return fila.back();
 		}
-		// Exceção
+		//Excessão
 		throw "Fila vazia!!";
 	}
 	
@@ -84,6 +84,53 @@ int main(int argc, char *argv[]){
 		cout << "Fila vazia!\n";
 	}else{
 		cout << "Fila nao vazia!\n";
+	}
+	
+	try{
+		cout << "Elemento da frente: " << f1.frente() << endl;	
+	}catch(const char * msg){
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	try{
+		cout << "Elemento do final: " << f1.final() << endl;	
+	}catch(const char * msg){
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	try{
+		double e = f1.remover();
+		cout << "Removido o elemento: " << e << endl; 
+	}catch(const char* msg){
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	try{
+		cout << "Elemento da frente: " << f1.frente() << endl;	
+	}catch(const char * msg){
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	Fila<string> f2;
+	
+	f2.inserir("Lucas");
+	f2.inserir("Matheus");
+	f2.inserir("Pedro");
+	f2.inserir("Marcos");
+	f2.inserir("Santigado");
+	
+	cout << "\n\nFila de strings...\n";
+	
+	try{
+		cout << "Elemento da frente: " << f2.frente() << endl;
+	}catch(const char* msg){
+		cerr << "Erro: " << msg << endl;
+	}
+	
+	try{
+		cout << "Elemento do final: " << f2.final() << endl;
+	}catch(const char* msg){
+		cerr << "Erro: " << msg << endl;
 	}
 
 	return 0;
