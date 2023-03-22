@@ -62,6 +62,36 @@ public:
 	bool vazia(){
 		return (cabeca == NULL);
 	}
+	
+	void inserir_inicio(int v){
+		No* novo_no = new No(v);
+		
+		novo_no->setProx(cabeca);
+		cabeca = novo_no;
+	}
+	
+	void inserir_final(int v){
+		No* novo_no = new No(v);
+		
+		if(vazia()){
+			cabeca = novo_no;
+			cauda = novo_no;
+		}else{
+			cauda->setProx(novo_no);
+			cauda = novo_no;
+		}
+	}
+	
+	int tamanho(){
+		if(vazia){
+			return 0;
+		}
+		No* c = cabeca;
+		int tam = 0;
+		do{
+			c = c->obterProx();
+		}while(c);
+	}
 };
 
 int main(int argc, char *argv[]){
