@@ -83,13 +83,14 @@ public:
 	}
 	
 	int tamanho(){
-		if(vazia){
+		if(vazia()){
 			return 0;
 		}
 		No* c = cabeca;
 		int tam = 0;
 		do{
 			c = c->obterProx();
+			tam++;
 		}while(c);
 	}
 };
