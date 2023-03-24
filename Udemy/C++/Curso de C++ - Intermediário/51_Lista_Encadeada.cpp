@@ -93,6 +93,40 @@ public:
 			tam++;
 		}while(c);
 	}
+	
+	bool existe(int v){
+		No* c = cabeca;
+		while(c){
+			if(c->obterValor() == v){
+				return true;
+			}
+			c = c->obterProx();
+		}
+	}
+	
+	void remover(){
+		if(!vazia){
+			if(cabeca->obterProx() == NULL){
+				cabeca = NULL;
+			}else if(cabeca->obterProx()->obterProx() == NULL){
+				cabeca->setProx(NULL);
+			}else{
+				No* ant_ant = cabeca;
+				No* ant = cabeca->obterProx();
+				No* corrente = cabeca->obterProx()->obterProx();
+				
+				while(corrente){
+					No* aux = ant;
+					ant = corrente;
+					ant_ant = aux;
+					corrente = corrente->obterProx();
+				}
+				delete ant_ant->obterProx();
+				ant_ant->setProx(NULL);
+				cauda = ant_ant;
+			}
+		}
+	}
 };
 
 int main(int argc, char *argv[]){
