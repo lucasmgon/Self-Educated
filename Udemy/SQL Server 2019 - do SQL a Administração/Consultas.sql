@@ -23,3 +23,7 @@ SELECT CONCAT(nome, ' recebe o salário de: R$ ', salario) AS 'Nome e salário' 
 /* Exibindo valores únicos (Distintos) */
 SELECT marca_vend FROM venda;
 SELECT DISTINCT marca_vend FROM venda;
+
+/* Exibindo a estrutura de uma tabela */
+/* A instução sp_help (SQL Server) é usada para retornar informações sobre um objeto de BD. */
+sp_help funcionario;
