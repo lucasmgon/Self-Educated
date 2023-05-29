@@ -55,3 +55,17 @@ SELECT * FROM funcionario WHERE salario IN (1250, 2500, 3500);
 SELECT * FROM funcionario WHERE id NOT IN (1, 2, 3);
 SELECT * FROM funcionario WHERE id <> 1 AND id <> 2 AND id <> 3;
 SELECT * FROM funcionario WHERE id != 1 AND id != 2 AND id <> 3;
+
+/* Operador LIKE - Testando uma cadeia de caracteres */
+/* Determina se uma cadeia de caracteres específica corresponde a um padrão especificado */
+/* %   - Substitui de zero a muitos caracteres */
+/* _   - Substitui apenas um caractere */
+/* []  - Qualquer caractere único no intervalo especificado. Ex. [a-c] */
+/* [^] - Qualquer caractere único que não esteja no intervalo especificado. Ex.[^a-c] */
+SELECT * from funcionario;
+SELECT * from funcionario WHERE nome LIKE 'Maria%';
+SELECT * FROM funcionario WHERE nome LIKE '%silva%';
+SELECT * FROM funcionario WHERE nome LIKE '___s%';
+SELECT * FROM funcionario WHERE data_contratacao LIKE '2015%';
+SELECT * FROM funcionario WHERE nome LIKE '[A-C]%';
+SELECT * FROM funcionario WHERE NOME like '[^A-C]%';
