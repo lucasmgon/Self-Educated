@@ -69,3 +69,7 @@ SELECT * FROM funcionario WHERE nome LIKE '___s%';
 SELECT * FROM funcionario WHERE data_contratacao LIKE '2015%';
 SELECT * FROM funcionario WHERE nome LIKE '[A-C]%';
 SELECT * FROM funcionario WHERE NOME like '[^A-C]%';
+
+/* Valores nulos - Valor não aplicavel */
+SELECT * FROM venda;
+SELECT * from venda WHERE quantidade IS NULL;
