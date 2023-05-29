@@ -73,3 +73,19 @@ SELECT * FROM funcionario WHERE NOME like '[^A-C]%';
 /* Valores nulos - Valor não aplicavel */
 SELECT * FROM venda;
 SELECT * from venda WHERE quantidade IS NULL;
+
+/* Operadores lógicos */
+SELECT * FROM venda;
+SELECT * FROM venda WHERE quantidade>100 AND marca_vend='Dolly';
+
+SELECT * FROM funcionario;
+SELECT * FROM funcionario WHERE cargo='Gerente' AND cidade='São Paulo';
+SELECT * FROM funcionario WHERE cargo='Vendedor' OR cidade='São Paulo';
+SELECT * FROM funcionario WHERE cidade='São Paulo' AND salario>3000;
+SELECT * FROM funcionario WHERE cargo='Vendedor' OR cargo='Gerente';
+SELECT * FROM funcionario WHERE (cargo='Gerente' OR cargo='Vendedor') AND salario>2500;
+SELECT * FROM funcionario WHERE (data_contratacao<'2010-01-01' OR data_contratacao<'2013-01-01') AND cidade='São Paulo';
+SELECT * FROM funcionario WHERE NOT cargo='Gerente';
+SELECT * FROM funcionario WHERE cargo!='Gerente';
+SELECT * FROM funcionario WHERE salario NOT IN (1500, 2500, 3500);
+SELECT * FROM funcionario WHERE cargo NOT IN ('Motorista', 'Gerente');
