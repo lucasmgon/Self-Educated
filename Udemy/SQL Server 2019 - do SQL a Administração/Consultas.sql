@@ -25,10 +25,10 @@ SELECT marca_vend FROM venda;
 SELECT DISTINCT marca_vend FROM venda;
 
 /* Exibindo a estrutura de uma tabela */
-/* A instução sp_help (SQL Server) é usada para retornar informações sobre um objeto de BD. */
+/* A instução sp_help (SQL Server) é usada para retornar informações sobre um objeto de BD */
 sp_help funcionario;
 
-/* Restringindo a exibição de dados - WHERE*/
+/* Restringindo a exibição de dados - WHERE */
 SELECT * FROM funcionario;
 SELECT * FROM funcionario WHERE salario > 1250;
 SELECT * FROM funcionario WHERE salario >= 1250;
@@ -47,3 +47,11 @@ SELECT * FROM funcionario WHERE salario NOT BETWEEN 1500 AND 2500;
 
 SELECT * FROM produto;
 SELECT nome_prod, estoque FROM produto WHERE estoque BETWEEN 10 AND 50;
+
+/* Especificando uma lista a ser testada */
+/* Cláusula IN é usada para determinar se um valor especificado corresponde a qualquer valor em uma subconsulta ou uma lista */
+SELECT * FROM funcionario;
+SELECT * FROM funcionario WHERE salario IN (1250, 2500, 3500);
+SELECT * FROM funcionario WHERE id NOT IN (1, 2, 3);
+SELECT * FROM funcionario WHERE id <> 1 AND id <> 2 AND id <> 3;
+SELECT * FROM funcionario WHERE id != 1 AND id != 2 AND id <> 3;
