@@ -27,3 +27,14 @@ SELECT DISTINCT marca_vend FROM venda;
 /* Exibindo a estrutura de uma tabela */
 /* A instução sp_help (SQL Server) é usada para retornar informações sobre um objeto de BD. */
 sp_help funcionario;
+
+/* Restringindo a exibição de dados - WHERE*/
+SELECT * FROM funcionario;
+SELECT * FROM funcionario WHERE salario > 1250;
+SELECT * FROM funcionario WHERE salario >= 1250;
+SELECT nome, nascimento, salario FROM funcionario WHERE salario>3500;
+
+SELECT nome, nascimento, cargo FROM funcionario WHERE cargo='Vendedor';
+SELECT * FROM funcionario WHERE cidade='São Paulo';
+SELECT * FROM funcionario WHERE data_contratacao='2010-10-10';
+SELECT * FROM funcionario WHERE data_contratacao>='2010-10-10';
