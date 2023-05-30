@@ -98,3 +98,15 @@ SELECT * FROM funcionario WHERE salario>2500 ORDER BY salario DESC;
 SELECT * FROM funcionario WHERE salario NOT BETWEEN 1500 AND 2500 ORDER BY salario DESC;
 SELECT * FROM funcionario ORDER BY 4 DESC;
 SELECT nome, nascimento, salario, (salario*0.35) AS Abono FROM funcionario ORDER BY Abono DESC;
+
+/* Manipulação de caracteres */
+SELECT CONCAT('Olá Mundo!', ' tudo bem?') AS Resposta; /* Concatenação de caracteres */
+SELECT CONCAT(nome, ' nasceu em: ', nascimento) AS Resposta FROM funcionario;
+
+SELECT SUBSTRING('Olá mundo!', 1,4); /* Corta a String - Indica caractere inicial e final */
+SELECT nome, SUBSTRING(nome, 1,8) AS Login FROM funcionario;
+
+SELECT nome, LEN(nome) AS quantidade FROM funcionario; /* Contar a quantidade de caracteres */
+
+SELECT REPLACE('Jack and Jue', 'J', 'Bl'); /* Trocar o caractere */
+SELECT nome, REPLACE(nome, 'a','*') AS Troca FROM funcionario;
