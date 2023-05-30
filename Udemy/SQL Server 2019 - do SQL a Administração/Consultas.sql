@@ -110,3 +110,17 @@ SELECT nome, LEN(nome) AS quantidade FROM funcionario; /* Contar a quantidade de
 
 SELECT REPLACE('Jack and Jue', 'J', 'Bl'); /* Trocar o caractere */
 SELECT nome, REPLACE(nome, 'a','*') AS Troca FROM funcionario;
+
+SELECT LOWER('Olá mundo'); /* Converter caracteres em minúsculo */
+SELECT nome, LOWER(nome) AS Resposta FROM funcionario;
+
+SELECT UPPER('Olá mundo'); /* Converter caracteres em maiúsculo */
+SELECT nome, UPPER(nome) AS Resposta FROM funcionario;
+SELECT nome, REPLACE(UPPER(nome), ' ','') AS Loggin FROM funcionario;
+SELECT nome, REPLACE(LOWER(nome), ' ','') AS Loggin FROM funcionario;
+
+SELECT LTRIM('   Espaços em brancos   '); /* Cortar espaços em brancos a esquerda da String */
+
+SELECT RTRIM(LTRIM('   Espaços em brancos   ')); /* Cortar espaços em brancos a direita da String */
+
+SELECT STUFF('Meu exemplo', 4, 0, 'maior'); /* Adicionar uma String dentro de outra */
