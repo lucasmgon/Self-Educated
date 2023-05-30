@@ -89,3 +89,12 @@ SELECT * FROM funcionario WHERE NOT cargo='Gerente';
 SELECT * FROM funcionario WHERE cargo!='Gerente';
 SELECT * FROM funcionario WHERE salario NOT IN (1500, 2500, 3500);
 SELECT * FROM funcionario WHERE cargo NOT IN ('Motorista', 'Gerente');
+
+/* Classificando dados retornados em uma consulta - ORDER BY ASC | DESC */
+SELECT * FROM funcionario;
+SELECT * FROM funcionario ORDER BY id DESC;
+SELECT * FROM funcionario ORDER BY salario DESC;
+SELECT * FROM funcionario WHERE salario>2500 ORDER BY salario DESC;
+SELECT * FROM funcionario WHERE salario NOT BETWEEN 1500 AND 2500 ORDER BY salario DESC;
+SELECT * FROM funcionario ORDER BY 4 DESC;
+SELECT nome, nascimento, salario, (salario*0.35) AS Abono FROM funcionario ORDER BY Abono DESC;
