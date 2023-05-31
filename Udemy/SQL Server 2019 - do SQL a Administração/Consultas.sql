@@ -124,3 +124,18 @@ SELECT LTRIM('   Espaços em brancos   '); /* Cortar espaços em brancos a esque
 SELECT RTRIM(LTRIM('   Espaços em brancos   ')); /* Cortar espaços em brancos a direita da String */
 
 SELECT STUFF('Meu exemplo', 4, 0, 'maior'); /* Adicionar uma String dentro de outra */
+
+/* Funções matemáticas */
+SELECT ROUND(1322.56, -1); /* Arrendonamento */
+SELECT ABS(-15); /* Transforma valores negativos em positivos */
+SELECT RAND()*500; /* Randomiza valores */
+SELECT id, nome, FLOOR(RAND()*500) as Senha FROM funcionario WHERE id=1;
+SELECT SQRT(81) AS resultado; /* Calcula a raiz quadrada */
+SELECT POWER(234, 2); /* Calcula a potencia */
+SELECT FLOOR(220.22); /* Remove as casas decimais */
+
+SELECT * FROM funcionario;
+SELECT SUM(salario) AS Soma FROM funcionario;/* Retorna a soma do campo especificado */
+SELECT AVG(salario) AS 'Média salarial' FROM funcionario;/* Retorna a média aritmética do campo especificado */
+SELECT MIN(salario) AS 'Menor salário' FROM funcionario;/* Retorna menor valor do campo especificado */
+SELECT MAX(salario) As 'Maior salário' FROM funcionario;/* Retorna maior valor do campo especificado */
