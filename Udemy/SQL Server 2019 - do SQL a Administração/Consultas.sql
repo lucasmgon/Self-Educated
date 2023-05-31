@@ -139,3 +139,12 @@ SELECT SUM(salario) AS Soma FROM funcionario;/* Retorna a soma do campo especifi
 SELECT AVG(salario) AS 'Média salarial' FROM funcionario;/* Retorna a média aritmética do campo especificado */
 SELECT MIN(salario) AS 'Menor salário' FROM funcionario;/* Retorna menor valor do campo especificado */
 SELECT MAX(salario) As 'Maior salário' FROM funcionario;/* Retorna maior valor do campo especificado */
+
+/* Funções para manipulação de datas */
+SELECT GETDATE(); /* Retorna a data e hora atual do sistema */
+SELECT nome, nascimento, DATEPART(MONTH, nascimento) AS 'Mês de aniversário' FROM funcionario ORDER BY 'Mês de aniversário' DESC; /* Retorna o mês atual do sistema */
+SELECT nome, data_contratacao, DATEADD(DAY, 5000, data_contratacao) '5000 dias na empresa' FROM funcionario; /* Retorna a data obtida pela soma de 5000 dias a partir da data atual do sistema */
+SELECT DATEADD(DAY,60, GETDATE()); /* Somando 60 dias após a data de hoje */
+SELECT DATEADD(MONTH,60, GETDATE()); /* Somando 60 meses após o mês atual */
+SELECT nome, nascimento, DATEDIFF(YEAR,data_contratacao, GETDATE()) AS 'Dias na empresa' FROM funcionario; /* Retorna a diferença de dias a partir das datas indicadas */
+SELECT nome, FORMAT(data_contratacao, 'dd/MM/yyyy') As 'Data' FROM funcionario; /* Exibe a data no formato indicado */
