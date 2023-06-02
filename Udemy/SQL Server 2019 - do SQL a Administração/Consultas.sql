@@ -148,3 +148,12 @@ SELECT DATEADD(DAY,60, GETDATE()); /* Somando 60 dias após a data de hoje */
 SELECT DATEADD(MONTH,60, GETDATE()); /* Somando 60 meses após o mês atual */
 SELECT nome, nascimento, DATEDIFF(YEAR,data_contratacao, GETDATE()) AS 'Dias na empresa' FROM funcionario; /* Retorna a diferença de dias a partir das datas indicadas */
 SELECT nome, FORMAT(data_contratacao, 'dd/MM/yyyy') As 'Data' FROM funcionario; /* Exibe a data no formato indicado */
+
+/* Subconsultas */
+/* É uma consulta que está aninhada dentro de uma instrução SELECT, INSERT, UPDATE ou DELETE ou em outra subconsulta. */
+/* Encontrar o funcionário com o maior salário: */
+SELECT * FROM funcionario WHERE salario = (SELECT MAX(salario) FROM funcionario);
+/* Encontrar os funcionários que recebem acima da média: */
+SELECT * FROM funcionario WHERE salario > (SELECT AVG(salario) FROM funcionario);
+/* Mostrar todas as informações do funcionário que realizou o maior numero de vendas: */
+SELECT * FROM funcionario WHERE nome = (SELECT vendedor FROM venda WHERE quantidade = (SELECT MAX(quantidade) FROM venda));
