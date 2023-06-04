@@ -157,3 +157,9 @@ SELECT * FROM funcionario WHERE salario = (SELECT MAX(salario) FROM funcionario)
 SELECT * FROM funcionario WHERE salario > (SELECT AVG(salario) FROM funcionario);
 /* Mostrar todas as informações do funcionário que realizou o maior numero de vendas: */
 SELECT * FROM funcionario WHERE nome = (SELECT vendedor FROM venda WHERE quantidade = (SELECT MAX(quantidade) FROM venda));
+
+/* Cláusulas IN - Determina se um valor especificado corresponde a qualquer valor em uma subconsulta ou uma lista */
+/* Exibir todos os produtos da tabela Produto que tenham quantidade maior que 150 na tabela venda */
+SELECT * FROM produto WHERE nome_prod IN (SELECT produto_vend FROM venda WHERE quantidade > 150);
+/* Exibir os produtos da tabela Produto que não tenham quantidade maior que 150 na tabela Venda */
+SELECT * FROM produto WHERE nome_prod NOT IN (SELECT produto_vend FROM venda WHERE quantidade > 150);
